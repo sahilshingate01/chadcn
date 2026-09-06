@@ -48,9 +48,24 @@ unless requested.
 - Verify npm account, package ownership, and published version. Never expose tokens.
 - Update README publication status only after the registry confirms the release.
 
-## Planned work
+## Agent discovery and skills
 
-WebMCP is not implemented. Do not advertise browser tools or an MCP endpoint.
+`/llms.txt` (also `/llm.txt`) and `/AGENTS.md` are served as plain text.
+`/agent/catalog.json` is a registry inventory, including non-runnable metadata.
+Read `skills/chadcn-design/SKILL.md` for interface design and
+`skills/chadcn-apps/SKILL.md` for complete demo workflows. Both are served under
+`/skills/<name>/SKILL.md` as well. Run `npm run agent:assets` after guide changes.
+
+In browsers exposing `document.modelContext.registerTool`, the catalog registers
+`chadcn_search`, `chadcn_inspect`, and `chadcn_open_demo`. The first two are read-only;
+the last changes browser selection. This is browser WebMCP, not a remote MCP server.
+Do not configure a fictional /mcp endpoint. See `docs/webmcp.md`.
+
+## Private boundary and planned work
+
+The mock database schema system and db.chadcn.dev service are proprietary and
+not implemented in this public repository. Never include private implementation,
+credentials, or schemas in its source, published artifacts, or agent responses.
 Scheduled example generation and broader distribution remain separate work.
 Only use models verified as available and free when a job requires free models;
 do not silently fall back to paid models.

@@ -1,0 +1,57 @@
+# chadcn
+
+> A day-one interface library for people and coding agents: components, blocks,
+> registry variants, themes, and interactive app demos. https://chadcn.dev
+
+## Start here
+
+- [Project README](https://github.com/sahilshingate01/chadcn#readme): overview, status, and screenshot.
+- [Agent instructions](https://github.com/sahilshingate01/chadcn/blob/main/AGENTS.md): consumer and contributor contract.
+- [CLI documentation](https://github.com/sahilshingate01/chadcn/blob/main/packages/cli/README.md): supported commands.
+- [Workspace guide](https://github.com/sahilshingate01/chadcn/blob/main/docs/workspace.md): upstream checkouts and generated adapters.
+- [Components](https://chadcn.dev/?view=components): individual controls.
+- [Blocks](https://chadcn.dev/?view=blocks): compositions of controls.
+- [Apps](https://chadcn.dev/?view=apps): complete interface demonstrations.
+- [Documentation](https://chadcn.dev/?view=documentation): source-library profiles.
+
+## CLI
+
+Package and executable: chadcn-ux. Node.js 22 or later.
+Version 0.1.0 is published on npm: https://www.npmjs.com/package/chadcn-ux
+Commands:
+
+    npx chadcn-ux init
+    npx chadcn-ux view button
+    npx chadcn-ux add button --dry-run
+    npx chadcn-ux add button card
+
+Installation delegates to a pinned shadcn CLI. Bare names select its default
+registry. Explicit registry URLs or configured @namespace/item references select
+other providers. init, add, view, and search pass options through unchanged.
+Check components.json and inspect changes before overwriting existing components.
+
+## Important limits
+
+Catalog inclusion does not mean a component can be installed independently.
+@chadcn/ui and @chadcn/upstream-* are private workspace packages, not public npm
+dependencies. Keep duplicate registry variants distinct. Preserve source licenses.
+App demos include local interactions; email delivery and AI services are not connected.
+Base, Ocean, Rose, Terminal, Rounded Neo Brutal, Classic Brutal, Atelier, and Blueprint
+are supported skins, with light, dark, and system modes.
+## Browser tools and skills
+
+WebMCP tools register when document.modelContext.registerTool is available:
+- chadcn_search: query, optional source/kind/offset; returns up to 25 runnable demos.
+- chadcn_inspect: exact id from search; returns metadata and provider variants.
+- chadcn_open_demo: exact id; opens the demo in the current browser tab.
+
+This is an in-browser API, not a remotely hosted MCP server. No /mcp endpoint exists.
+Without WebMCP, use these HTTP resources:
+- [Agent guide](https://chadcn.dev/AGENTS.md)
+- [Catalog inventory](https://chadcn.dev/agent/catalog.json): includes metadata; not all items are runnable or installable.
+- [Design skill](https://chadcn.dev/skills/chadcn-design/SKILL.md)
+- [App-building skill](https://chadcn.dev/skills/chadcn-apps/SKILL.md)
+
+The mock database schema service at db.chadcn.dev is proprietary future work;
+no private schemas or implementation are exposed here. Scheduled generation is
+not implemented. /llm.txt is an alias copy of this guide.
