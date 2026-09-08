@@ -5,11 +5,18 @@
   "author": "Sahil Shingate <sahilshingate0@gmail.com>",
   "type": "module",
   "exports": {
-    "./collection-card": "./src/collection-card.tsx"
+    "./collection-card": "./src/collection-card.tsx",
+    "./ai-chat-bar": "./src/ai-chat-bar/AIChatBar.tsx",
+    "./ai-todo-list": "./src/ai-todo-list/AITodoList.tsx",
+    "./schema-builder": "./src/schema-builder/SchemaBuilder.tsx",
+    "./schema-builder/schema": "./src/schema-builder/schema.ts",
+    "./glass-button": "./src/glass-button.tsx",
+    "./studio.css": "./src/studio.css"
   },
   "dependencies": {
     "@chadcn/upstream-shadcn": "0.0.0",
-    "@chadcn/upstream-kibo": "0.0.0"
+    "@chadcn/upstream-kibo": "0.0.0",
+    "lucide-react": "^0.577.0"
   },
   "peerDependencies": {
     "react": "^19.2.0",

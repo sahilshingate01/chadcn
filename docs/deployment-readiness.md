@@ -4,7 +4,7 @@ The site is a Vite static build with two entry points: index.html and demo.html.
 
 Typechecking and all 13 unit tests passed during the launch check. The fresh production build passed (2m 51s); large-chunk warnings remain. Earlier mount checks cover 1,016 demos but do not constitute exhaustive visual or workflow validation.
 
-Netlify CLI is authenticated to sahilshingate01’s team, with agensis.io and tinyworld.build among its 49 projects. This checkout is not yet linked to a Netlify project. The requested domain spelling needs confirming before DNS changes.
+Netlify CLI is authenticated to Sahil Shingate’s team, with agensis.io and tinyworld.build among its 49 projects. This checkout is not yet linked to a Netlify project. The requested domain spelling needs confirming before DNS changes.
 
 Netlify project `chadcn-library` is connected to the private GitHub repository `sahilshingate01/chadcn`, with production branch `main` and custom domain `chadcn.dev`. The build uses `deploy/package-lock.json`, fetches the upstream revisions recorded in `sources.lock.json`, generates adapters, and builds both Vite entry points. `netlify.toml` configures the install base, command, publish directory, and SPA fallback. A successful hosted build and DNS cutover still require verification.
 
